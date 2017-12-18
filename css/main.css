@@ -1,3 +1,21 @@
-/*
- * Estilos de tu proyecto
- */
+body {
+	margin: 0 auto;
+}
+
+header {
+  border: 1px solid black;
+	height: 100px;
+	width: 100%;
+}
+
+header div {
+  border: 1px solid blue;
+	width: 100%;
+}
+
+header div img {
+  border: 1px solid pink;
+  height: 60px;
+  margin-left: 40%;
+  width: 200px;
+}
