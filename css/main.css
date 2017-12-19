@@ -1,21 +1,131 @@
-body {
-	margin: 0 auto;
+/*
+ * Estilos de tu proyecto
+
+font-family: 'Hind Siliguri', sans-serif;;
+font-family: 'Cardo', serif;
+ */
+ body {
+   /*background-image:url(../assets/images/planeta.png);*/
+   background: white;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin: 0px;
+   padding: 0px;
+
+
+ }
+
+button {
+  background: rgb(255,193,7);
+  border: none;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 25px;
+  height: 35px;
+  margin: 5px;
+  width: 15%;
 }
 
-header {
-  border: 1px solid black;
-	height: 100px;
-	width: 100%;
+img {
+  height: 80px ;
+  /*opacity:0.7;*/
+  width: 20%;
 }
 
-header div {
-  border: 1px solid blue;
-	width: 100%;
+li {
+  /*font-family: 'Hind Siliguri', sans-serif;*/
+  font-size: 30px;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
 }
 
-header div img {
-  border: 1px solid pink;
-  height: 60px;
-  margin-left: 40%;
-  width: 200px;
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul > li> a {
+  color: #fff;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+ul > li> a:hover {
+  color: rgb(249, 213, 9);
+}
+
+#menu {
+  /*background:rgba(10, 39, 117,0.3);*/
+  height:  100px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+#contenido {
+  height: 200px;
+  margin: 0px;
+  padding: 0px;
+  width: 20%;
+}
+
+
+#location {
+  height: 150px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.contact {
+
+  color: #fff;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+  text-align:center;
+}
+
+.contact > i {
+  height: 20px;
+  margin: 10px;
+}
+
+footer > p {
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 40px;
+  padding: 0px;
+  text-align: center;
+  width: 30%;
+}
+
+.b-menu {
+  display: inline-block;
+  text-align: center;
+  width: 75%;
+}
+
+canvas {
+  height: 300px !important;
+  width: 400px !important;
+}
+
+#active-students {
+  width: 50%;
+  margin-left: 25%;
+}
+
+#active-students > div {
+  background: white;
+  display: inline-block;
+  height: 300px;
+  margin: 0 17px;
+  width: 45%;
 }
