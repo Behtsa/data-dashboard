@@ -11,7 +11,6 @@ var scl2 = data['SCL']['2017-1']['students'];
 var scl3 = data['SCL']['2017-2']['students'];
 var counter = 0; 
 var inactive = 0;
-
 // Defining functions to iterate over the students
 // so that we can select only the active ones.
 function activeStudentsAQP2() {
@@ -284,22 +283,6 @@ var myChart = new Chart(ctx, {
     }
 });
 
-var cities = Object.keys(data);
-//console.log(cities)
-var body = document.getElementsByTagName('div');
-for(i = 0; i < cities.length; i++) {
-	var button = document.createElement('button');
-	button.innerHTML = cities[i];
-	button.onclick = getGenByCity;
-	body[0].appendChild(button);
-}
-
-function getGenByCity(event) {
-  var city = event.srcElement.innerHTML;
-  var gen = Object.keys(data[city]);
-  console.log(gen);
-}
-
 
 google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChartAqp);
@@ -388,9 +371,6 @@ google.charts.load("current", {packages:["corechart"]});
         var chart4 = new google.visualization.PieChart(document.getElementById('sclcomparacion'));
         chart4.draw(data, options);
       }
-
-
-
 
 
 
