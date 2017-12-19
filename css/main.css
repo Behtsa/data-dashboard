@@ -129,3 +129,17 @@ canvas {
   margin: 0 17px;
   width: 45%;
 }
+
+#donutchart {
+  height: 300px !important;
+  width: 400px !important;
+}
+
+#desertion {
+  padding: 6%;
+  margin-left: 10%;
+}
+
+#desertion > div {
+  display: inline-block;
+}

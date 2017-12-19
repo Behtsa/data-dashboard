@@ -10,6 +10,7 @@ var scl1 = data['SCL']['2016-2']['students'];
 var scl2 = data['SCL']['2017-1']['students'];
 var scl3 = data['SCL']['2017-2']['students'];
 var counter = 0; 
+var inactive = 0;
 
 // Defining functions to iterate over the students
 // so that we can select only the active ones.
@@ -135,6 +136,27 @@ var sclOne = activeStudentsSCL1();
 var sclTwo = activeStudentsSCL2();
 var sclThree = activeStudentsSCL3();
 
+// Sum for desertion
+var totalStudentsAqp = aqp2.length + aqp1.length;
+var totalStudentsCdmx = cdmx1.length + cdmx2.length;
+var totalStudentsLim = lim1.length + lim2.length + lim3.length;
+var totalStudentsScl =  scl1.length + scl2.length + scl3.length;
+
+var totalActiveAqp = aqpTwo + aqpOne;
+var totalDesertionAqp = totalStudentsAqp - totalActiveAqp;
+
+var totalActiveCdmx = cdmxOne + cdmxTwo; 
+var totalDesertionCdmx = totalStudentsCdmx - totalActiveCdmx;
+
+var totalActiveLim = limOne + limTwo + limThree; 
+var totalDesertionLim = totalStudentsLim - totalActiveLim;
+
+
+var totalActiveScl = sclOne + sclTwo + sclThree; 
+var totalDesertionScl = totalStudentsScl - totalActiveScl;
+
+
+
 // Drawing graph
 
 var ctx = document.getElementById("arequipa").getContext('2d');
@@ -146,11 +168,11 @@ var myChart = new Chart(ctx, {
             label: '# Active Students',
             data: [aqpTwo, aqpOne],
             backgroundColor: [
-                'rgba(255, 99, 132, 1)',
+                'rgba(255, 206, 86, 1)',
                 'rgba(54, 162, 235, 1)'
             ],
             borderColor: [
-                'rgba(255,99,132,1)',
+                'rgba(255, 206, 86, 1)',
                 'rgba(54, 162, 235, 1)',
             ],
             borderWidth: 1
@@ -279,12 +301,93 @@ function getGenByCity(event) {
 }
 
 
+google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChartAqp);
+      function drawChartAqp() {
+        var data = google.visualization.arrayToDataTable([
+          ['status', 'percentage'],
+          ['Activa', totalActiveAqp],
+          ['Inactiva', totalDesertionAqp],
+        ]);
 
+        var options = {
+          title: 'Comparacion Activas-Desercion',
+          pieHole: 0.4,
+          slices: {
+            0: { color: '#FFC107' },
+            1: { color: '#B9B9B9' }
+          }
+        };
 
+        var chart = new google.visualization.PieChart(document.getElementById('aqpcomparacion'));
+        chart.draw(data, options);
+      }
 
+google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChartCdmx);
+      function drawChartCdmx() {
+        var data = google.visualization.arrayToDataTable([
+          ['status', 'percentage'],
+          ['Activa', totalActiveCdmx],
+          ['Inactiva', totalDesertionCdmx],
+        ]);
 
+        var options = {
+          title: 'Comparacion CDMX Activas-Desercion',
+          pieHole: 0.4,
+          slices: {
+            0: { color: '#FFC107' },
+            1: { color: '#B9B9B9' }
+          }
+        };
 
+        var chart2 = new google.visualization.PieChart(document.getElementById('cdmxcomparacion'));
+        chart2.draw(data, options);
+      }
 
+google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChartLim);
+      function drawChartLim() {
+        var data = google.visualization.arrayToDataTable([
+          ['status', 'percentage'],
+          ['Activa', totalActiveLim],
+          ['Inactiva', totalDesertionLim],
+        ]);
+
+        var options = {
+          title: 'Comparacion LIMA Activas-Desercion',
+          pieHole: 0.4,
+          slices: {
+            0: { color: '#FFC107' },
+            1: { color: '#B9B9B9' }
+          }
+        };
+
+        var chart3 = new google.visualization.PieChart(document.getElementById('limacomparacion'));
+        chart3.draw(data, options);
+      }
+
+google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChartScl);
+      function drawChartScl() {
+        var data = google.visualization.arrayToDataTable([
+          ['status', 'percentage'],
+          ['Activa', totalActiveScl],
+          ['Inactiva', totalDesertionScl],
+        ]);
+
+        var options = {
+          title: 'Comparacion santiago Activas-Desercion',
+          pieHole: 0.4,
+          slices: {
+            0: { color: '#FFC107' },
+            1: { color: '#B9B9B9' }
+          }
+        };
+
+        var chart4 = new google.visualization.PieChart(document.getElementById('sclcomparacion'));
+        chart4.draw(data, options);
+      }
 
 
 
