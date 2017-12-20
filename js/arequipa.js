@@ -21,3 +21,33 @@
 // 	var generacion = document.getElementsByTagName("input").value;
 // 	console.log(generacion);
 // }
+AmCharts.makeChart("superan",
+	{
+		"type": "pie",
+		"angle": 12,
+		"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+		"depth3D": 15,
+		"innerRadius": "40%",
+		"titleField": "category",
+		"valueField": "column-1",
+		"allLabels": [],
+		"balloon": {},
+		"legend": {
+					"enabled": true,
+					"align": "center",
+					"markerType": "circle"
+					},
+		"titles": [],
+		"dataProvider": [
+						{
+							"category": "superan meta",
+							"column-1": "15"
+						},
+						{
+							"category": "no superan meta",
+							"column-1": "9"
+						}
+					]
+	})
+
+

@@ -38,7 +38,7 @@ img {
   width: 100%;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
   font-family: 'Hind Siliguri', sans-serif;
 }
@@ -177,3 +177,5 @@ ul > li> a:hover {
 .mtop {
   margin-top: 5%;
 }
+
+
