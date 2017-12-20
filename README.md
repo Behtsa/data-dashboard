@@ -14,7 +14,7 @@ _Datos que revisan normalmente:_
 3. La cantidad de estudiantes que superan la meta de puntos 70% del total de puntos en HSE y en tech.
 4. El porcentaje anterior en relación al total de estudiantes.
 5. El Net Promoter Score (NPS) promedio de los sprints cursados.
-6. La cantidad y el porcentaje total de estudiantes que superan la meta de puntos técnicos y HSE en promedio y por sprint.
+6. Cantidad y el porcentaje total de estudiantes que superan la meta de puntos técnicos y HSE en promedio y por sprint.
 7. El porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
 8. La puntuación promedio de l@s profesores.
 9. La puntuación promedio de l@s jedi masters.
