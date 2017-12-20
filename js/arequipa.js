@@ -3,7 +3,7 @@
 // var body = document.getElementsByClassName('b-menu');
 // for(i = 0; i < cities.length; i++) {
 // 	var button = document.createElement('button');
-//  	button.innerHTML = cities[i];
+//  button.innerHTML = cities[i];
 // 	button.onclick = getDataByCity;
 // 	body[0].appendChild(button);
 // }

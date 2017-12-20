@@ -9,7 +9,7 @@ var lim3 = data['LIM']['2017-2']['students'];
 var scl1 = data['SCL']['2016-2']['students'];
 var scl2 = data['SCL']['2017-1']['students'];
 var scl3 = data['SCL']['2017-2']['students'];
-var counter = 0; 
+var counter = 0;
 var inactive = 0;
 // Defining functions to iterate over the students
 // so that we can select only the active ones.
@@ -122,8 +122,8 @@ function activeStudentsSCL3() {
     return(counter);
 }
 
-//Saving active counter in separated variables to use it on the 
-// graph bar. 
+//Saving active counter in separated variables to use it on the
+// graph bar.
 var aqpTwo = activeStudentsAQP2();
 var aqpOne = activeStudentsAQP1();
 var cdmxOne = activeStudentsCDMX1();
@@ -144,14 +144,14 @@ var totalStudentsScl =  scl1.length + scl2.length + scl3.length;
 var totalActiveAqp = aqpTwo + aqpOne;
 var totalDesertionAqp = totalStudentsAqp - totalActiveAqp;
 
-var totalActiveCdmx = cdmxOne + cdmxTwo; 
+var totalActiveCdmx = cdmxOne + cdmxTwo;
 var totalDesertionCdmx = totalStudentsCdmx - totalActiveCdmx;
 
-var totalActiveLim = limOne + limTwo + limThree; 
+var totalActiveLim = limOne + limTwo + limThree;
 var totalDesertionLim = totalStudentsLim - totalActiveLim;
 
 
-var totalActiveScl = sclOne + sclTwo + sclThree; 
+var totalActiveScl = sclOne + sclTwo + sclThree;
 var totalDesertionScl = totalStudentsScl - totalActiveScl;
 
 
@@ -365,9 +365,3 @@ crearContenedorPorcentajesAQP();
 crearContenedorPorcentajesCDMX();
 crearContenedorPorcentajesLIM();
 crearContenedorPorcentajesSCL();
-
-
-
-
-
-

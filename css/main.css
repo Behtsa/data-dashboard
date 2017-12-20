@@ -1,6 +1,5 @@
 /*
  * Estilos de tu proyecto
-
 font-family: 'Hind Siliguri', sans-serif;;
 font-family: 'Cardo', serif;
  */
@@ -10,12 +9,6 @@ font-family: 'Cardo', serif;
    background-size: cover;
    margin: 0px;
    padding: 0px;
-
-
- }
-
- #menu > div {
-  display: inline-block;
  }
 
 button {
@@ -35,13 +28,36 @@ button a {
   text-decoration: none;;
 }
 
+canvas {
+  height: 500px !important;
+  width: 650px !important;
+}
+
 img {
   height: 80px ;
   width: 100%;
 }
 
-li {
-  /*font-family: 'Hind Siliguri', sans-serif;*/
+h1 {
+  text-align: center;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+footer > p {
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 40px;
+  padding: 0px;
+  text-align: center;
+  width: 30%;
+}
+
+p {
+  margin: 0 auto;
+}
+/* li {
+//font-family: 'Hind Siliguri', sans-serif;
   font-size: 30px;
   margin: 0px;
   padding: 0px;
@@ -64,64 +80,7 @@ ul > li> a {
 ul > li> a:hover {
   color: rgb(249, 213, 9);
 }
-
-#menu {
-  /*background:rgba(10, 39, 117,0.3);*/
-  height:  100px;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-}
-
-#contenido {
-  height: 200px;
-  margin: 0px;
-  padding: 0px;
-  width: 20%;
-}
-
-
-#location {
-  height: 150px;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-}
-
-.contact {
-
-  color: #fff;
-  font-size: 20px;
-  margin: 0px;
-  padding: 0px;
-  text-align:center;
-}
-
-.contact > i {
-  height: 20px;
-  margin: 10px;
-}
-
-footer > p {
-  color: #fff;
-  display: inline-block;
-  font-size: 20px;
-  margin-left: 40px;
-  padding: 0px;
-  text-align: center;
-  width: 30%;
-}
-
-.b-menu {
-  display: inline-block;
-  text-align: center;
-  width: 63%;
-}
-
-canvas {
-  height: 500px !important;
-  width: 650px !important;
-}
+*/
 
 #active-students {
   height: auto;
@@ -136,17 +95,47 @@ canvas {
   width: 40%;
 }
 
+#contenido {
+  height: 200px;
+  margin: 0px;
+  padding: 0px;
+  width: 20%;
+}
+
 #lima {
   width: 530px !important;
 }
 
-
-.mleft {
- margin-left: 5%;
+#location {
+  height: 150px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
 }
 
-.mtop {
-  margin-top: 5%;
+#luci {
+  border-radius: 80%;
+  display: inline-block;
+  width: 8%;
+  height: 100px;
+}
+
+#menu {
+  /*background:rgba(10, 39, 117,0.3);*/
+  height:  100px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+#menu > div {
+  display: inline-block;
+}
+
+.b-menu {
+  display: inline-block;
+  text-align: center;
+  width: 63%;
 }
 
 .box {
@@ -162,17 +151,29 @@ canvas {
   width: 15%;
 }
 
-h1 {
-  text-align: center;
-  font-family: 'Hind Siliguri', sans-serif;
-}
-
-p {
-  margin: 0 auto;
-}
-
 .box:hover {
   background-color: white;
   border: 1px solid #FFC107;
   color: black;
+}
+
+.contact {
+  color: #fff;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+  text-align:center;
+}
+
+.contact > i {
+  height: 20px;
+  margin: 10px;
+}
+
+.mleft {
+ margin-left: 5%;
+}
+
+.mtop {
+  margin-top: 5%;
 }
