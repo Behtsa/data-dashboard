@@ -14,10 +14,10 @@
 //   console.log(gen);
 // }
 
-document.getElementById("gen62").addEventListener("click", sprintsPerGeneration);
+// document.getElementById("gen62").addEventListener("click", sprintsPerGeneration);
 
 
-function sprintsPerGeneration() {
-	var generacion = document.getElementsByTagName("input").value;
-	console.log(parseInt(generacion));
-}
+// function sprintsPerGeneration() {
+// 	var generacion = document.getElementsByTagName("input").value;
+// 	console.log(generacion);
+// }
