@@ -136,6 +136,9 @@ canvas {
   width: 40%;
 }
 
+#lima {
+  width: 530px !important;
+}
 
 
 .mleft {
