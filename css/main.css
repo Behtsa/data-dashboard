@@ -157,6 +157,15 @@ ul > li> a:hover {
   color: black;
 }
 
+.coders {
+  width: 100%;
+  height:  auto;
+}
+
+.coders > img {
+  width: 100%;
+  height: auto;
+}
 .contact {
   color: #fff;
   font-size: 20px;
