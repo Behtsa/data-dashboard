@@ -10,7 +10,11 @@
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
     <!--Añadiendo libreria Chart js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+    <!--Añadiendo libreria Google Charts-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--Añadiendo libreria Chart Maker-->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
   </head>
   <body>
     <header id="menu">
@@ -27,39 +31,26 @@
     </header>
 
     <section id="active-students">
-     <div id="aqpcomparacion" class="desertion mleft"></div>
-     <div>
+     <div class="mleft">
        <canvas id="arequipa"></canvas>
      </div>
      <div>
-       <canvas id="cdmx" class="mleft1"></canvas>
+       <canvas id="cdmx"></canvas>
      </div>
-     <div id="cdmxcomparacion" class="desertion mleft2"></div>
-     <div id="limacomparacion" class="desertion mleft"></div>
-     <div>
+     <div class="mleft mtop">
        <canvas id="lima"></canvas>
      </div>
-     <div>
-       <canvas id="santiago" class="mleft1"></canvas>
+     <div class="mtop">
+       <canvas id="santiago"></canvas>
      </div>
-     <div id="sclcomparacion" class="desertion mleft2"></div>
    </section>
-
-     <!--Mostrando logos de contacto-->
-    <footer id="location">
-      <p>CONTACTANOS M & N</p>
-      <div class="contact">
-        <i class="fa fa-twitter " aria-hidden="true"></i>
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-        <i class="fa fa-facebook" aria-hidden="true"></i></i>
-        <i class="fa fa-google-plus" aria-hidden="true"></i>
-        <i class="fa fa-dribbble" aria-hidden="true"></i>
-      </div>
-    </footer>
+   <section id="desertion-table">
+    <h1>Porcentaje de Desercion de Estudiantes por sede</h1>
+     
+   </section>
     <!-- Base de datos -->
     <script src="./js/data.js"></script>
     <!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
-    <script src="./js/arequipa.js"></script>
   </body>
 </html>

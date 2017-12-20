@@ -1,15 +1,23 @@
 // var cities = Object.keys(data);
-// //console.log(cities)
-// //var body = document.getElementsByTagName('button');
+// console.log(cities)
+// var body = document.getElementsByClassName('b-menu');
 // for(i = 0; i < cities.length; i++) {
-// 	var a = document.createElement('a');
-// 	a.innerHTML = cities[i];
-// 	a.onclick = getGenByCity;
-// 	document.getElementById('sede_a').appendChild(a);
+// 	var button = document.createElement('button');
+//  	button.innerHTML = cities[i];
+// 	button.onclick = getDataByCity;
+// 	body[0].appendChild(button);
 // }
 
-// function getGenByCity(event) {
+// function getDataByCity(event) {
 //   var city = event.srcElement.innerHTML;
 //   var gen = Object.keys(data[city]);
 //   console.log(gen);
 // }
+
+document.getElementById("gen62").addEventListener("click", sprintsPerGeneration);
+
+
+function sprintsPerGeneration() {
+	var generacion = document.getElementsByTagName("input").value;
+	console.log(parseInt(generacion));
+}

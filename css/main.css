@@ -119,13 +119,13 @@ footer > p {
 }
 
 canvas {
-  height: 300px !important;
-  width: 400px !important;
+  height: 500px !important;
+  width: 650px !important;
 }
 
 #active-students {
   height: auto;
-  margin: 10px 10px;
+  margin: 50px 10px;
   width: 100%;
 }
 
@@ -133,37 +133,43 @@ canvas {
   background: white;
   display: inline-block;
   height: 30%;
-  width: 45%;
+  width: 40%;
 }
 
-#donutchart {
-  height: 300px !important;
-  width: 400px !important;
-}
 
-#desertion {
-  padding: 6%;
-  margin-left: 10%;
-}
-
-#desertion > div {
-  display: inline-block;
-  width: 49%;
-}
-
-.desertion {
-height: 300px !important;
-width: 400px !important;
-}
 
 .mleft {
- margin-left: 20%;
-}
-
-.mleft1 {
- margin-left: 40%;
-}
-
-.mleft2 {
  margin-left: 10%;
+}
+
+.mtop {
+  margin-top: 5%;
+}
+
+.box {
+  background: #FFC107;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 36px;
+  height: 115px;
+  margin: 0px 74px 150px 74px;
+  text-align: center;
+  width: 15%;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+p {
+  margin: 0 auto;
+}
+
+.box:hover {
+  background-color: white;
+  border: 1px solid #FFC107;
+  color: black;
 }

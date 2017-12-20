@@ -162,17 +162,131 @@ var ctx = document.getElementById("arequipa").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["AQP 2016-2", "AQP 2017-1"],
+        labels: ["Presentes 2016-2", "Desertaron 2016-2", "Presentes 2017-1", "Desertaron 2017-1"],
         datasets: [{
-            label: '# Active Students',
-            data: [aqpTwo, aqpOne],
+            label: '# Alumnas AQP',
+            data: [aqpTwo, (aqp2.length)-aqpTwo, aqpOne, (aqp2.length)-aqpOne],
             backgroundColor: [
                 'rgba(255, 206, 86, 1)',
-                'rgba(54, 162, 235, 1)'
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
             ],
             borderColor: [
                 'rgba(255, 206, 86, 1)',
-                'rgba(54, 162, 235, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+  	    scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+var ctx = document.getElementById("cdmx").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Presentes 2017-1", "Desertaron 2017-1", "Presentes 2017-2", "Desertaron 2017-2"],
+        datasets: [{
+            label: '# Alumnas CDMX',
+            data: [cdmxOne, (cdmx1.length)-cdmxOne, cdmxTwo, (cdmx2.length)-cdmxTwo],
+            backgroundColor: [
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+            ],
+            borderColor: [
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+  	    scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+var ctx = document.getElementById("lima").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["P 2016-2", "D 2016-2", "P 2017-1", "D 2017-1", "P 2017-2", "D 2017-2"],
+        datasets: [{
+            label: '# Alumnas Lima',
+            data: [limOne, (lim1.length)-limOne, limTwo, (lim2.length)-limTwo, limThree, (lim3.length)-limThree],
+            backgroundColor: [
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+            ],
+            borderColor: [
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+  	    scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+var ctx = document.getElementById("santiago").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["P 2016-2", "D 2016-2", "P 2017-1", "D 2017-1", "P 2017-2", "D 2017-2"],
+        datasets: [{
+            label: '# Alumnas Santiago de Chile',
+            data: [sclOne, (scl1.length)-sclOne, sclTwo, (scl2.length)-sclTwo, sclThree, (scl3.length)-sclThree],
+            backgroundColor: [
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+            ],
+            borderColor: [
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
+                'rgba(255, 206, 86, 1)',
+                '#B9B9B9',
             ],
             borderWidth: 1
         }]
@@ -189,188 +303,70 @@ var myChart = new Chart(ctx, {
 });
 
 
-var ctx = document.getElementById("cdmx").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["CDMX 2017-1", "CDMX 2017-2"],
-        datasets: [{
-            label: '# Active Students',
-            data: [cdmxOne, cdmxTwo],
-            backgroundColor: [
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-            ],
-            borderColor: [
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
+function crearContenedorPorcentajesAQP() {
+  var p = document.createElement("p");
+  var pSede = document.createElement("p");
+  var porcentaje = (totalDesertionAqp * 100) / totalStudentsAqp;
+  p.innerText = porcentaje.toFixed(2) + "%";
+  pSede.innerText = 'Arequipa';
 
-var ctx = document.getElementById("lima").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["LIMA 2016-2", "LIMA 2017-1", " LIMA 2017-2"],
-        datasets: [{
-            label: '# Active Students',
-            data: [limOne, limTwo, limThree],
-            backgroundColor: [
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(255, 206, 86, 1)',
-            ],
-            borderColor: [
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(255, 206, 86, 1)',
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
+  var divContenedor = document.createElement("div");
+  divContenedor.className = 'box';
+  divContenedor.appendChild(pSede);
+  divContenedor.appendChild(p);
+  document.getElementById('desertion-table').appendChild(divContenedor);
+}
 
-var ctx = document.getElementById("santiago").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["SCL 2016-2", "SCL 2017-1", " SCL 2017-2"],
-        datasets: [{
-            label: '# Active Students',
-            data: [sclOne, sclTwo, sclThree],
-            backgroundColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(54, 162, 235, 1)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(54, 162, 235, 1)',
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
+function crearContenedorPorcentajesCDMX() {
+  var p = document.createElement("p");
+  var pSede = document.createElement("p");
+  var porcentaje = (totalDesertionCdmx * 100) / totalStudentsCdmx;
+  p.innerText = porcentaje.toFixed(2) + "%";
+  pSede.innerText = 'CDMX';
+
+  var divContenedor = document.createElement("div");
+  divContenedor.className = 'box';
+  divContenedor.appendChild(pSede);
+  divContenedor.appendChild(p);
+  document.getElementById('desertion-table').appendChild(divContenedor);
+}
+
+function crearContenedorPorcentajesLIM() {
+  var p = document.createElement("p");
+  var pSede = document.createElement("p");
+  var porcentaje = (totalDesertionLim * 100) / totalStudentsLim;
+  p.innerText = porcentaje.toFixed(2) + "%";
+  pSede.innerText = 'Lima';
+
+  var divContenedor = document.createElement("div");
+  divContenedor.className = 'box';
+  divContenedor.appendChild(pSede);
+  divContenedor.appendChild(p);
+  document.getElementById('desertion-table').appendChild(divContenedor);
+}
+
+function crearContenedorPorcentajesSCL() {
+  var p = document.createElement("p");
+  var pSede = document.createElement("p");
+  var porcentaje = (totalDesertionScl * 100) / totalStudentsScl;
+  p.innerText = porcentaje.toFixed(2) + "%";
+  pSede.innerText = 'Santiago';
+
+  var divContenedor = document.createElement("div");
+  divContenedor.className = 'box';
+  divContenedor.appendChild(pSede);
+  divContenedor.appendChild(p);
+  document.getElementById('desertion-table').appendChild(divContenedor);
+}
 
 
-google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChartAqp);
-      function drawChartAqp() {
-        var data = google.visualization.arrayToDataTable([
-          ['status', 'percentage'],
-          ['Activa', totalActiveAqp],
-          ['Inactiva', totalDesertionAqp],
-        ]);
 
-        var options = {
-          title: 'Comparacion Activas-Desercion',
-          pieHole: 0.4,
-          slices: {
-            0: { color: '#FFC107' },
-            1: { color: '#B9B9B9' }
-          }
-        };
+crearContenedorPorcentajesAQP();
+crearContenedorPorcentajesCDMX();
+crearContenedorPorcentajesLIM();
+crearContenedorPorcentajesSCL();
 
-        var chart = new google.visualization.PieChart(document.getElementById('aqpcomparacion'));
-        chart.draw(data, options);
-      }
 
-google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChartCdmx);
-      function drawChartCdmx() {
-        var data = google.visualization.arrayToDataTable([
-          ['status', 'percentage'],
-          ['Activa', totalActiveCdmx],
-          ['Inactiva', totalDesertionCdmx],
-        ]);
-
-        var options = {
-          title: 'Comparacion CDMX Activas-Desercion',
-          pieHole: 0.4,
-          slices: {
-            0: { color: '#FFC107' },
-            1: { color: '#B9B9B9' }
-          }
-        };
-
-        var chart2 = new google.visualization.PieChart(document.getElementById('cdmxcomparacion'));
-        chart2.draw(data, options);
-      }
-
-google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChartLim);
-      function drawChartLim() {
-        var data = google.visualization.arrayToDataTable([
-          ['status', 'percentage'],
-          ['Activa', totalActiveLim],
-          ['Inactiva', totalDesertionLim],
-        ]);
-
-        var options = {
-          title: 'Comparacion LIMA Activas-Desercion',
-          pieHole: 0.4,
-          slices: {
-            0: { color: '#FFC107' },
-            1: { color: '#B9B9B9' }
-          }
-        };
-
-        var chart3 = new google.visualization.PieChart(document.getElementById('limacomparacion'));
-        chart3.draw(data, options);
-      }
-
-google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChartScl);
-      function drawChartScl() {
-        var data = google.visualization.arrayToDataTable([
-          ['status', 'percentage'],
-          ['Activa', totalActiveScl],
-          ['Inactiva', totalDesertionScl],
-        ]);
-
-        var options = {
-          title: 'Comparacion santiago Activas-Desercion',
-          pieHole: 0.4,
-          slices: {
-            0: { color: '#FFC107' },
-            1: { color: '#B9B9B9' }
-          }
-        };
-
-        var chart4 = new google.visualization.PieChart(document.getElementById('sclcomparacion'));
-        chart4.draw(data, options);
-      }
 
 
 
